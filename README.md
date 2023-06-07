@@ -1,4 +1,4 @@
-# Image Displayer for Dakboard[label](http://example.com)
+# Image Displayer for [Dakboard](http://dakboard.com)
 flask app to show images for our display board
 
 # Requirements
