@@ -1,4 +1,4 @@
-#!/home/student01/Documents/Cyber_Cats/env/bin/python3
+#!/home/student01/Documents/image_displayer/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
