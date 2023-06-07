@@ -1,5 +1,5 @@
 # Image Displayer for [Dakboard](http://dakboard.com)
-flask app to show images for our display board
+This simple flask web server allows you to upload images to display and link to Dakboard.
 
 # Requirements
 Python 3
