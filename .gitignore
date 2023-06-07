@@ -1,9 +1,12 @@
 # .gitignore
 
-# Ignore Python virtual environments
+# Ignore Python Virtual Environments
 venv/
 env/
 *.pyc
 
-# Ignore images
+# Ignore Environment Variables File
+.env
+
+# Ignore Images
 images/*
