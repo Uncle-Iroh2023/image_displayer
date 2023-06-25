@@ -10,3 +10,12 @@ env/
 
 # Ignore Images
 images/*
+
+# Ignore static Images
+static/*.png
+
+# Ignore Static Cat Images
+static/cat/*.png
+
+# Ignore asset pngs
+assets/*.png
