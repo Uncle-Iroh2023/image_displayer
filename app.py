@@ -1,15 +1,16 @@
+#!/var/www/image_displayer/venv/bin/python
 import os
 import random
-from flask import Flask, send_from_directory
+from flask import Flask, render_template
 from collections import deque
 
 app = Flask(__name__)
 
 last_images = deque(maxlen=10)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def display_random_image():
-    image_folder = os.path.join(app.root_path, 'images')
+    image_folder = os.path.join(app.root_path, 'static/cat')
     image_files = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
     if not image_files:
         return "No images found"
@@ -26,7 +27,7 @@ def display_random_image():
     # Add the shown image to the queue of last shown images
     last_images.append(random_image)
 
-    return send_from_directory(image_folder, random_image)
+    return render_template("index.html", image=random_image)
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(port=1337,host="0.0.0.0",debug=True)
